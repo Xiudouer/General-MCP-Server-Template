@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "local-tools": {
+      "command": "node",
+      "args": ["/ABS/PATH/LocalMCPKit/src/main.mjs", "stdio", "/ABS/PATH/LocalMCPKit/config.local.json"]
+    }
+  }
+}

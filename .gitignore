@@ -1,0 +1,6 @@
+node_modules/
+private-state/
+*.log
+*.sqlite
+.env
+config.local.json

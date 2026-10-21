@@ -1,0 +1,6 @@
+{
+  "workspace": "workspace",
+  "enabledTools": ["git_status", "git_log", "text_search", "sqlite_query"],
+  "database": {"file":"sample.sqlite", "queries":{"find_notes":"SELECT id, title FROM notes WHERE title LIKE ? ORDER BY id"}},
+  "plugins": []
+}
