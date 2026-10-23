@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- GitHub Actions `tests` 工作流：Node.js 24、`npm ci --ignore-scripts` 和完整集成测试。
+
 ### Changed
 
 - 测试目录统一为 `tests/`；`npm test` 与贡献指南中的路径同步更新。
