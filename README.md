@@ -1,5 +1,7 @@
 # LocalMCPKit
 
+[![tests](https://github.com/Xiudouer/General-MCP-Server-Template/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Xiudouer/General-MCP-Server-Template/actions/workflows/tests.yml)
+
 通用本地 MCP Server 模板：把自己维护的本地函数、命令或查询封装为模型可发现、可调用的工具。Node.js JavaScript 源码直接运行，无编译步骤。提供 **stdio + Streamable HTTP**；用官方 MCP SDK 负责 JSON-RPC、initialize、tools/list、tools/call 和协议协商。
 
 参考 WeKnora 的端点结构独立实现，不是 WeKnora 的知识库服务，也不提供其业务 API 的兼容替代。固定源码的 HTTP 目录是 **12 项**、CLI 是 **10 项**，没有把“29 个工具”当作已核实事实。详见 [分析记录](docs/WEKNORA-ANALYSIS.md)。
