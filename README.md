@@ -75,6 +75,23 @@ node src/main.mjs http config.local.json
 - HTTP 限 64 KiB body、8 KiB headers、16 个处理请求、32 个连接；进程级每分钟 120 个 POST，固定窗口限流。非分布式配额系统。
 - 适配器异常返回通用 `isError`，不回传堆栈、配置、Token 或底层 stderr。程序不记录工具参数/结果。正常结果可能包含你授权读取的数据，它们会交给 MCP 客户端及其模型；本模板不是离线模型或数据不外发保证。
 
+## 仓库结构
+
+| 路径 | 内容 |
+|---|---|
+| `src/` | MCP 服务入口、stdio/Streamable HTTP 传输、工具注册与校验、配置加载、子进程工作器 |
+| `tests/` | 集成测试：真实 stdio、loopback HTTP、鉴权、Host/Origin、路径与参数边界 |
+| `docs/` | WeKnora 端点结构与实现边界分析 |
+| `examples/` | 示例配置、客户端配置、只读插件和示例工作区；`npm run demo:init` 生成 `examples/sample.sqlite` |
+| `scripts/` | `init-demo.mjs` 演示数据初始化 |
+| `licenses/` | WeKnora 上游许可证 |
+| `package.json` / `package-lock.json` | 依赖声明与 `npm` 脚本，要求 Node.js 24.14+ |
+| `UPSTREAM.md` / `THIRD-PARTY.md` | 上游对应关系与第三方声明 |
+| `TEST-RESULTS.md` | 实际验证范围与限制 |
+| `CONTRIBUTING.md` / `CHANGELOG.md` | 贡献流程与版本记录 |
+
+本模板没有 `assets/`：仓库不含图片或图标，示例数据在运行时生成；也没有 `Dockerfile`，交付形态是 Node.js 源码，不提供容器镜像。`node_modules/`、`config.local.json`、`examples/sample.sqlite` 等运行产物已被 `.gitignore` 排除。
+
 ## 验证和交付
 
 ```powershell

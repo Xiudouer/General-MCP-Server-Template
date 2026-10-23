@@ -10,7 +10,7 @@
     "start": "node src/main.mjs stdio examples/config.json",
     "http": "node src/main.mjs http examples/config.json",
     "demo:init": "node scripts/init-demo.mjs",
-    "test": "node --test test/integration.test.mjs"
+    "test": "node --test tests/integration.test.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.32.1",

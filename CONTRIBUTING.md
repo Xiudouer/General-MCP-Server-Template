@@ -23,7 +23,7 @@ npm test
 - 工具参数必须使用严格 Zod schema 校验；不要让模型传入任意命令、SQL、文件路径或插件路径。
 - 外部命令必须使用固定可执行文件和参数数组，禁止 shell 拼接；数据库保持只读、参数绑定和有界结果。
 - 插件是维护者信任的本地代码，不是沙盒；新增示例应默认只读，并说明超时和输出上限。
-- 修改工具、传输、路径校验或预算时，必须补充 `test/integration.test.mjs`。
+- 修改工具、传输、路径校验或预算时，必须补充 `tests/integration.test.mjs`。
 - 更新用户可见行为时同步修改 README、`TEST-RESULTS.md` 和 `CHANGELOG.md`。
 - **不要提交** `node_modules/`、`config.local.json`、`*.sqlite`、`.env`、日志、私有状态或任何凭据。这些路径已在 `.gitignore` 中排除。
 
