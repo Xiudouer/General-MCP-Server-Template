@@ -85,4 +85,4 @@ npm test
 
 源码 ZIP 不含 node_modules、私有配置或运行数据，首次 `npm ci` 需要联网；已用 package-lock 固定依赖。若要完全离线分发，需要另行准备对应环境的 Node 和依赖，当前源码包不作此承诺。
 
-自有源码 MIT；设计来源和许可证见 [UPSTREAM.md](UPSTREAM.md) 与 [THIRD-PARTY.md](THIRD-PARTY.md)。
+自有源码 MIT；设计来源和许可证见 [UPSTREAM.md](UPSTREAM.md) 与 [THIRD-PARTY.md](THIRD-PARTY.md)。贡献流程见 [CONTRIBUTING.md](CONTRIBUTING.md)，版本记录见 [CHANGELOG.md](CHANGELOG.md)。
