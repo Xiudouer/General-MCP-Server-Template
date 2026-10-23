@@ -13,6 +13,10 @@
 - 测试目录统一为 `tests/`；`npm test` 与贡献指南中的路径同步更新。
 - README 新增“仓库结构”一节，逐项说明 `src/`、`tests/`、`docs/`、`examples/`、`scripts/` 和依赖配置。
 
+### Fixed
+
+- Linux 下集成测试未把 Git 解析为绝对路径，导致首次 GitHub Actions 运行失败；现已修复，Windows 行为不变。
+
 ## [1.0.0] - 2026-10-21
 
 ### Added

@@ -21,7 +21,7 @@ await fs.mkdir(testBase,{recursive:true});
 const root=await fs.mkdtemp(path.join(testBase,'local-mcp-kit-test-'));
 const workspace=path.join(root,'repo');await fs.mkdir(workspace);
 await fs.writeFile(path.join(workspace,'hello.md'),'MCP hello\nlocal tools\n');
-const git=process.env.GIT_EXECUTABLE??(process.platform==='win32'?'C:/Program Files/Git/cmd/git.exe':'git');
+const git=process.env.GIT_EXECUTABLE??(process.platform==='win32'?'C:/Program Files/Git/cmd/git.exe':execFileSync('sh',['-c','command -v git'],{encoding:'utf8'}).trim());
 function runGit(...args){return execFileSync(git,['-C',workspace,...args],{windowsHide:true,stdio:'pipe'});}
 runGit('init');runGit('add','hello.md');runGit('-c','user.name=Example','-c','user.email=example@invalid','commit','-m','Example fixture');
 await fs.appendFile(path.join(workspace,'hello.md'),'changed\n');
